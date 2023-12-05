@@ -12,7 +12,7 @@ const DiscoverMovies = () => {
     useEffect(()=>{
         const getMovies = async() => {
             const response = await GET ('/discover/movie');
-            console.log(response);
+            
             setMovies(response.results);
             
 
@@ -30,6 +30,7 @@ const DiscoverMovies = () => {
     
     return (
       <View>
+        <Text>Discover New Movies</Text>
         <SliderBox images={images} dotColor={Constants.secondaryColor}/>
       </View>
     );
